@@ -1,0 +1,192 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+}
+body{
+    /* margin-top: 40px; */
+    background-color:#333;
+    color:#fff;
+    height: 100vh;
+    display: grid;
+    /* display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center; */
+
+    
+
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+/* TO TILT THE CONTAINER */
+    transform-style: preserve-3d;
+    perspective: 900px;
+}
+.textBox{
+    display: grid;
+    place-items: center;
+    /* font-family: 'Acme', sans-serif; */
+/* font-family: 'Dancing Script', cursive; */
+font-family: 'Kaushan Script', cursive;
+    
+   
+
+}
+
+#h1{
+    text-align: center;
+    font-size: 3.5rem;
+}
+#h3{
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size:2rem; 
+    font-family: 'Acme', sans-serif; letter-spacing: 3px;
+}
+.textBox h1,h3{ 
+    text-shadow: 0 2px 5px red;
+}
+.container{
+     height: 80vh;
+    width:400px; 
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    /* margin:auto; */
+    border:1px solid red;
+    border-radius: 15px;
+    /* BOX SHADOW GENERATOR */
+    -webkit-box-shadow: 10px 10px 32px 0px rgba(255,0,0,1);
+-moz-box-shadow: 10px 10px 32px 0px rgba(255,0,0,1);
+box-shadow: 10px 10px 32px 0px rgba(255,0,0,1);
+
+/* TO TILT THE CONTAINER */
+transform:rotatey(-10deg);  
+
+/* ANIMATION */
+animation: animate 3s ease-in-out infinite ;
+}
+@keyframes animate {
+    0%{
+        transform:rotatey(10deg )    }
+        50%{
+            transform: rotatey(-10deg);
+        }
+        100%{
+            transform: rotatey(10deg);
+        }
+}
+.title{
+    margin-top: 10px;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-top;
+    align-items: center;
+   
+font-family: 'Lobster', cursive;
+letter-spacing: 5px;
+    /* border:1px solid red */
+
+    
+    /* margin-top:5px; */
+}
+
+
+/*  animation for textbox */
+
+.zoomInLeft {
+    -webkit-animation-name: zoomInLeft;
+    animation-name: zoomInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes zoomInLeft {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+    60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+    }
+    @keyframes zoomInLeft {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+    60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+    } 
+
+/* animation ends */
+
+
+
+
+
+
+.typeBox{
+    margin-top: 5px;
+    padding: 12px;
+}
+.enter-value{
+    padding: 15px;
+    /* box-sizing: inherit; */
+
+}
+.form{
+    /* border:1px solid red */
+    margin-top: 2px;
+    padding: 30px;
+    /* font-family: 'Dancing Script', cursive; */
+    /* letter-spacing: 3px; */
+    
+
+}
+.card{
+    border:2px solid grey;
+    margin-bottom:4px;
+    padding: 20px;
+    padding-right: 200px;
+    
+    
+    
+}
+
+ /*MEDIA QUERY  */
+ @media screen and (max-width:600px) {
+    /* body{
+        background-color: red;
+    } */
+    #h1{
+        font-size: 2rem;
+    }
+    #h3{
+        font-size:1rem; 
+        font-family: 'Acme', sans-serif; letter-spacing: 3px;
+    }
+ }
